@@ -1,10 +1,11 @@
 import express from "express";
 import "dotenv/config";
-import vehiculesRouter from "./routes/vehicules";
+import vehiculesRouter from "./routes/vehicules.js";
 import journal from "./middlewares/journal.js";
 
+
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 
 app.use(express.json());
@@ -23,5 +24,4 @@ app.use((req, res) => {
 app.listen(PORT, () => {
     console.log(`server running on ${PORT}`);
 });
-
 
