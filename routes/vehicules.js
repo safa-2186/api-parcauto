@@ -11,8 +11,6 @@ let vehicules = [
 
 
 
-
-
 // GET	/vehicules	liste les véhicules ; avec ?disponible=true, seulement les disponibles
 
 router.get("/", (req, res) => {
@@ -94,7 +92,7 @@ router.patch("/:id", (req, res) => {
 // DELETE	/vehicules/:id	supprime un véhicule
 
 router.delete("/:id", (req, res) => {
-    
+
   const id = Number(req.params.id);
   const vehicule = vehicules.find((v) => v.id === id);
 
